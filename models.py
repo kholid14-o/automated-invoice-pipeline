@@ -4,10 +4,9 @@ from database import Base
 class InvoiceRecord(Base):
     __tablename__ = "invoices"
 
-    # Gunakan huruf kecil "index=True", bukan "Index=True"
+    
     id = Column(Integer, primary_key=True, index=True)
     
-    # Bagian ini juga dipastikan menggunakan huruf kecil
     filename = Column(String, index=True)
     status = Column(String, default="Uploaded")
 
